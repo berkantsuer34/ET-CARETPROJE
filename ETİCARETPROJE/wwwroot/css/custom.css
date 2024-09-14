@@ -1,0 +1,19 @@
+﻿.category-box {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+    .category-box img {
+        max-height: 150px;
+        object-fit: cover;
+    }
+
+.card {
+    margin-bottom: 20px;
+}
+
+footer {
+    padding: 20px 0;
+    background-color: #f8f9fa;
+}

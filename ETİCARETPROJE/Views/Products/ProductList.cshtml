@@ -1,0 +1,16 @@
+﻿<h2>Ürünler</h2>
+<div class="row">
+    @foreach (var product in Model)
+    {
+        <div class="col-md-4">
+            <div class="card">
+                <img class="card-img-top" src="@product.ImageUrl" alt="@product.ProductName">
+                <div class="card-body">
+                    <h5 class="card-title">@product.ProductName</h5>
+                    <p class="card-text">@product.Price.ToString("C")</p>
+                    <a href="/Products/Details/@product.ProductId" class="btn btn-primary">İncele</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>

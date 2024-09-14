@@ -1,0 +1,17 @@
+﻿@model ETİCARETPROJE.Models.Product
+
+@{
+    ViewData["Title"] = "Ürün Detayı";
+}
+
+<h2>@Model.ProductName</h2>
+
+<div>
+    <h4>Fiyat: @Model.Price.ToString("C")</h4>
+    <h4>Stok: @Model.StockQuantity</h4>
+    <p>@Model.Description</p>
+
+    <div>
+       
+    </div>
+</div>

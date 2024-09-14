@@ -1,0 +1,47 @@
+﻿@model IEnumerable<ETİCARETPROJE.Models.Product>
+
+<div class="jumbotron text-center">
+    <h1>En İyi Ürünler Burada</h1>
+    <p>İndirimli ürünleri kaçırmayın!</p>
+    <a href="/Products" class="btn btn-primary">Alışverişe Başla</a>
+</div>
+
+<div class="row text-center">
+    <div class="col-lg-3">
+        <div class="category-box">
+            <img src="@Url.Content("~/images/elektronik.jpg")" class="img-fluid" alt="Elektronik">
+            <h4>Elektronik</h4>
+        </div>
+    </div>
+    <div class="col-lg-3">
+        <div class="category-box">
+            <img src="@Url.Content("~/images/giyim.jpg")" class="img-fluid" alt="Giyim">
+            <h4>Giyim</h4>
+        </div>
+    </div>
+    <!-- Diğer kategoriler için yeni kutular ekleyebilirsiniz -->
+</div>
+
+<h2 class="text-center my-4">Popüler Ürünler</h2>
+<div class="row">
+    @if (Model != null && Model.Any())
+    {
+        @foreach (var product in Model)
+        {
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="" alt="@product.ProductName">
+                    <div class="card-body">
+                        <h5 class="card-title">@product.ProductName</h5>
+                        <p class="card-text">@product.Price.ToString("C")</p>
+                        <a href="/Products/Details/@product.ProductId" class="btn btn-primary">İncele</a>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <p class="text-center">Ürün bulunamadı.</p>
+    }
+</div>
